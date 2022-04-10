@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/controller/controller_home.java=UTF-8
+encoding//src/controller/controller_salary.java=UTF-8
+encoding//src/controller/controller_sign_in.java=UTF-8
+encoding//src/controller/controller_sign_up.java=UTF-8
+encoding//src/controller/qlnv_controller.java=UTF-8
+encoding//src/model/NhanVien.java=UTF-8
+encoding//src/model/Tinh.java=UTF-8
+encoding//src/model/ql_user.java=UTF-8
+encoding//src/model/user.java=UTF-8
+encoding//src/test_proApp/test.java=UTF-8
+encoding//src/view/Home_admin.java=UTF-8
+encoding//src/view/Sign_in.java=UTF-8
+encoding//src/view/qlnv_chamCong.java=UTF-8
+encoding//src/view/qlnv_view.java=UTF-8
+encoding//src/view/sign_up.java=UTF-8
