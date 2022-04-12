@@ -147,20 +147,23 @@ public class Sign_in extends JFrame {
 			}
 			
 			int ok = 0;
-			for (user person : u) {
-				if(person.getUseName().equals(use)) {
-					ok = 1;
-					JOptionPane.showMessageDialog(this, "Đăng nhập thành công!");
-					nguoiDung = person;
-					this.setVisible(false);
-					new qlnv_view();
+				for (user person : u) {
+					if(person.getUseName().equals(use) && person.getPass().equals(pass)) {
+						ok = 1;
+						JOptionPane.showMessageDialog(this, "Đăng nhập thành công!");
+						nguoiDung = person;
+						break;
+					}
 				}
-			}
 			
 			if(ok == 0) {
 				JOptionPane.showMessageDialog(this, "Tài khoản không tồn tại!");
 				this.textField_use.setText("");
 				this.passwordField.setText("");
+			}
+			else {
+				this.setVisible(false);
+				new qlnv_view();
 			}
 			
 		}catch(Exception e) {

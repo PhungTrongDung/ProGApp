@@ -288,7 +288,7 @@ public class qlnv_chamCong extends JFrame {
 		button_save = new JButton("Save");
 		button_save.addActionListener(ac);
 		button_save.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		button_save.setBounds(436, 499, 94, 32);
+		button_save.setBounds(501, 499, 94, 32);
 		getContentPane().add(button_save);
 		
 		JSeparator separator2 = new JSeparator();
@@ -298,8 +298,14 @@ public class qlnv_chamCong extends JFrame {
 		JButton button_update = new JButton("Cập nhật");
 		button_update.addActionListener(ac);
 		button_update.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		button_update.setBounds(269, 499, 94, 32);
+		button_update.setBounds(198, 499, 94, 32);
 		getContentPane().add(button_update);
+		
+		JButton button_them = new JButton("Thêm");
+		button_them.addActionListener(ac);
+		button_them.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		button_them.setBounds(349, 499, 94, 32);
+		getContentPane().add(button_them);
 		
 //		JButton button_back = new JButton("Quay lại");
 //		button_back.addActionListener(ac);
@@ -582,6 +588,22 @@ public class qlnv_chamCong extends JFrame {
 
 	public void thoatChuongTrinh() {
 		this.setVisible(false);
+	}
+
+	public void thucHienThem() {
+		int maVT = Integer.valueOf(this.textField_id.getText());
+		String name = this.textField_name.getText();
+		
+		double luongTheoGio = Double.valueOf(this.textField_luongCoBan.getText());
+		int soGioLam = Integer.valueOf(this.textField_soGiolam.getText());
+		int phutMuon = Integer.valueOf(this.textField_muon.getText());
+		double phat = phutMuon * 5000;
+		double luong = (luongTheoGio * soGioLam) - phat;
+		
+		NhanVien nv = new NhanVien(maVT, name, null, null, rootPaneCheckingEnabled, "", luongTheoGio, soGioLam, phutMuon, phat, luong);
+		
+		this.themOrCapNhatNhanVien(nv);
+		
 	}
 
 //	public void Back() {

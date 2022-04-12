@@ -31,6 +31,9 @@ public class controller_salary implements ActionListener {
 		}else if(src.equals("Cập nhật")) {
 			this.salary.thucHienUpdate();
 		}else if(src.equals("Save")) {
+			this.salary.thucHienThem();
+		}
+		else if(src.equals("Thêm")) {
 			this.salary.luu();
 			this.salary.xoaForm();
 		}
