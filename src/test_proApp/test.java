@@ -13,8 +13,8 @@ public class test {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 //			new qlnv_chamCong();
 //			new qlnv_view();
-//			new Home_admin();
-			new sign_up();
+			new Home_admin();
+//			new sign_up();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
